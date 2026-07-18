@@ -9,6 +9,7 @@ import os
 import json
 import datetime
 from anthropic import Anthropic
+from json_repair import repair_json
 
 # --- Konfiguration ---
 MODEL = "claude-sonnet-4-6"  # gutes Preis-/Qualitätsverhältnis für diesen Zweck
@@ -39,6 +40,7 @@ QUALITÄTSANFORDERUNGEN:
 - Bei widersprüchlichen Infos: kennzeichnen
 - Keine reine Linkliste – echte Zusammenfassungen mit Einordnung
 - Lieber 8-10 wichtige Meldungen gut erklärt als 20 oberflächliche
+- WICHTIG für gültiges JSON: Verwende IN DEN TEXTEN NIEMALS normale doppelte Anführungszeichen ("). Falls du ein Zitat oder einen Begriff hervorheben willst, nutze stattdessen einfache Anführungszeichen (') oder deutsche Anführungszeichen (» «).
 
 Antworte NUR mit validem JSON in exakt diesem Format. Deine Antwort MUSS mit dem Zeichen { beginnen und mit } enden – keine Einleitung, kein "Hier ist...", keine Markdown-Formatierung, keine Codeblock-Fences, kein Text davor oder danach:
 {
@@ -95,9 +97,15 @@ def generate_briefing() -> dict:
     try:
         data = json.loads(json_str)
     except json.JSONDecodeError as e:
-        print(f"WARNUNG: JSON-Parsing fehlgeschlagen: {e}")
-        print(f"Extrahierter String (erste 2000 Zeichen):\n{json_str[:2000]}")
-        raise
+        print(f"WARNUNG: JSON-Parsing fehlgeschlagen, versuche Reparatur: {e}")
+        try:
+            repaired = repair_json(json_str)
+            data = json.loads(repaired)
+            print("JSON erfolgreich repariert.")
+        except Exception as repair_error:
+            print(f"WARNUNG: Auch Reparatur fehlgeschlagen: {repair_error}")
+            print(f"Extrahierter String (erste 2000 Zeichen):\n{json_str[:2000]}")
+            raise
 
     return data
 
