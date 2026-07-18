@@ -62,7 +62,7 @@ def generate_briefing() -> dict:
     response = client.messages.create(
         model=MODEL,
         max_tokens=MAX_TOKENS,
-        tools=[{"type": "web_search_20250305", "name": "web_search"}],
+        tools=[{"type": "web_search_20250305", "name": "web_search", "max_uses": 6}],
         messages=[{"role": "user", "content": PROMPT}],
     )
 
