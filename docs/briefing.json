@@ -1,6 +1,58 @@
 {
-  "date": "Noch kein Lauf",
-  "summary": "Das ist ein Platzhalter. Sobald der erste GitHub-Actions-Lauf durch ist, steht hier dein echtes Briefing.",
-  "politics": [],
-  "markets": []
+  "date": "2026-07-18",
+  "summary": "Der Nahe Osten dominiert die Weltlage: Die USA führen zum siebten Mal in Folge Luftangriffe auf den Iran durch, während Teheran mit Gegenangriffen auf Verbündete der USA in der Region antwortet – der zunächst vereinbarte Waffenstillstand ist vollständig kollabiert. In Europa setzt Deutschland mit Frankreich ein historisches Signal: Die deutsch-französische Atomkooperation nimmt mit der ersten gemeinsamen Luftwaffenübung konkrete Gestalt an. An den Märkten lastet die Eskalation im Nahen Osten schwer: Der Ölpreis stieg auf rund 88 Dollar je Barrel, während Halbleiterwerte unter massivem Druck stehen – ausgelöst durch Sorgen über eine Abschwächung der KI-Investitionszyklen und Trumps neue Vorwürfe gegen China, die den mühsam erarbeiteten Handelskompromiss gefährden.",
+  "politics": [
+    {
+      "headline": "Iran-Krieg eskaliert: USA fliegen siebte Bombennacht – Golfstaaten unter Beschuss",
+      "body": "Das US-Militär hat zum siebten Mal in Folge Luftangriffe auf den Iran durchgeführt und nach eigenen Angaben Überwachungsanlagen, Militärlogistik, unterirdische Waffenlager und maritime Kapazitäten zerstört. Iran reagierte mit einer breiten Angriffswelle: Jordanien fing 10 iranische Raketen ab, Kuwait-Luftabwehr griff ein, und Saudi-Arabien gab kurzzeitig Warnungen für zwei Gouvernements aus. Iran griff zudem ein Kraftwerk mit Meerwasserentsalzungsanlage in Kuwait an und löste dort einen Brand aus – ein gezielter Angriff auf zivile Infrastruktur, der laut UN-Generalsekretär Guterres 'inakzeptabel' sei. In Iran selbst sind nach US-Angriffen im Süden mindestens 10.000 Menschen ohne Trinkwasser. Irans Top-Militärberater warnt vor einer 'Vollangriffs-Offensive', sollten US-Bombenangriffe übers Wochenende anhalten. Einordnung: Der im Juni vereinbarte Waffenstillstand ist definitiv Geschichte. Der Krieg weitet sich regional aus, und Pakistan – ursprünglich Vermittler – hat seine aktiven Bemühungen laut dpa vorerst eingestellt. Die Straße von Hormus ist de facto blockiert.",
+      "source": "CNN, Euronews, ZDFheute, CNBC (17.–18. Juli 2026)"
+    },
+    {
+      "headline": "Deutschland und Frankreich starten nukleares Bündnis – historische Zeitenwende",
+      "body": "Auf dem Fliegerhorst Nörvenich bei Köln haben Deutschland und Frankreich ihre im März vereinbarte Nuklear-Partnerschaft erstmals in die Praxis umgesetzt: Zwei französische Rafale-Kampfjets, die mit Atomwaffen bestückt werden können, und zwei Eurofighter der Bundeswehr übten gemeinsam die Luftbetankung durch ein französisches Tankflugzeug. Der deutsch-französische Verteidigungs- und Sicherheitsrat tagte unter Leitung von Bundeskanzler Merz und Präsident Macron und beschloss als nächsten Schritt, dass sich deutsche Soldaten im Herbst erstmals an einem französischen Nuklearmanöver beteiligen. Sieben weitere europäische Staaten – darunter Polen, die Niederlande und Schweden – haben positiv auf das französische Angebot des nuklearen Schutzschirms reagiert. Einordnung: Deutschland signalisiert damit unmissverständlich, dass es sich bei der nuklearen Abschreckung nicht mehr allein auf die USA verlassen will. Der Schritt hat historische Dimensionen und markiert eine neue Ära europäischer Sicherheitspolitik.",
+      "source": "dpa, Badische Zeitung, deutschland.de (16.–17. Juli 2026)"
+    },
+    {
+      "headline": "Trump beschuldigt China des 'größten Wahlbetrugs der Geschichte' – neue Belastung für Beziehungen",
+      "body": "US-Präsident Trump nutzte zur besten TV-Sendezeit eine seltene Rede an die Nation, um China zu bezichtigen, bei der Wahl 2020 die Daten von rund 220 Millionen US-Wählern gestohlen zu haben. Er kündigte die Freigabe von Dokumenten an, die 'schockierende Schwachstellen' im Wahlsystem belegen sollen. Pekings Außenministeriumssprecher Lin Jian wies die Vorwürfe als 'vollständig erfunden und darauf ausgerichtet, China zu verleumden' zurück. Besonders brisant: Die Anschuldigungen kommen nur zwei Monate nach Trumps Staatsbesuch in Peking, bei dem er Xi Jinping als 'Freund' bezeichnete. Chinas Reaktion: Die schweren Vorwürfe könnten Xis geplanten US-Besuch im September gefährden. Einordnung: Beobachter sehen in der Rede primär einen innenpolitischen Schachzug vor den Midterm-Wahlen – geopolitisch aber riskiert Trump damit den fragilen Burgfrieden mit Peking, der sich seit dem Handelskompromiss 2025 etabliert hatte.",
+      "source": "dpa, t-online, 20 Minuten, Washington Times, Euronews (16.–17. Juli 2026)"
+    },
+    {
+      "headline": "Ukraine: Drohnensturm auf Moskau-Region, russische Frontgewinne verlangsamen sich",
+      "body": "Die Ukraine hat nach eigenen Angaben zwei Logistikzentren in den russischen Regionen Moskau und Tambow sowie eine Ölanlage angegriffen – die Zentren sollen für die Lieferung sanktionierter Bauteile für Drohnenproduktion genutzt worden sein. Dabei wurden laut russischen Behörden sieben Mitarbeiter einer Nachtschicht getötet. Zusätzlich trafen ukrainische Drohnen zwölf Schiffe im Schwarzen und Asowschen Meer. Gleichzeitig meldete Russland, über 370 Drohnen auf die Region Moskau abgefangen zu haben. Scheidender deutscher Botschafter Lambsdorff sieht bei Putin 'keinen ernsthaften Willen zu Verhandlungen' und warnt vor einer möglichen zweiten russischen Mobilmachung nach der Duma-Wahl im September. Einordnung: Die Frontlage bleibt weitgehend eingefroren, aber die Eskalation mit gegenseitigen Tiefenangriffen auf zivile Infrastruktur verschärft sich – mit steigendem Risiko einer weiteren russischen Eskalationsspirale nach dem Herbst.",
+      "source": "ZDFheute, dpa (17.–18. Juli 2026)"
+    },
+    {
+      "headline": "China/Taiwan: Xis PLA-Säuberungen verzögern Taiwan-Invasion – Druck bleibt hoch",
+      "body": "Laut einer Analyse des East Asia Forum hat Xis weitreichende Säuberung des chinesischen Militärs – zuletzt wurden im Juni 2026 sechs weitere hochrangige Offiziere abgesetzt – paradoxerweise den Zeitplan einer möglichen Taiwan-Invasion nach hinten verschoben. Die Volksbefreiungsarmee (PLA) verfügt im Zentralen Militärrat (CMC) derzeit nur noch über zwei aktive Mitglieder. Gleichzeitig nutzt Peking den durch den Iran-Krieg geschwächten amerikanischen Rüstungsbestand als strategisches Fenster für mittelfristige Druckausübung. Taiwan verstärkt seinerseits seine maritimen und Luftverteidigungskapazitäten und plant im Juli Blockade-Übungen. Einordnung: Kurzfristig ist eine Invasion weniger wahrscheinlich als erwartet – mittelfristig bleibt Taiwan einer der gefährlichsten Krisenherde, sobald Xi seine Militärführung wieder konsolidiert hat.",
+      "source": "East Asia Forum, AEI/ISW (Juli 2026)"
+    }
+  ],
+  "markets": [
+    {
+      "headline": "Indizes: Wall Street und DAX unter Druck – Tech-Ausverkauf und Geopolitik belasten",
+      "body": "Die US-Märkte schlossen die vergangene Handelswoche klar im Minus: Der S&P 500 verlor rund 0,6 Prozent, der Nasdaq 100 fiel um ca. 1,5 Prozent und der Dow Jones gab rund 100 Punkte nach. Vorbörsliche DAX-Futures zeigten am Freitagmorgen ebenfalls deutliche Verluste, da Asiens Börsen in der Nacht schwach tendierten. Belastet wurde das Sentiment durch eine Kombination aus neu aufgeflammtem Geopolitik-Risiko (Iran-Krieg), Sorgen um die KI-Kapitalausgaben-Dynamik und dem schwachen Netflix-Ausblick. Einordnung: Die Märkte befinden sich in einer Phase erhöhter Nervosität – KI-Bewertungen und geopolitische Schocks treffen gleichzeitig auf einen ohnehin fragilen globalen Wachstumsausblick.",
+      "source": "Trading Economics, stock3.com, finanzen.net, Handelsblatt (17.–18. Juli 2026)"
+    },
+    {
+      "headline": "Ölpreis auf 88 Dollar – Straße von Hormus droht vollständig zu versiegen",
+      "body": "Brent Crude schloss am Freitag bei 88,10 Dollar je Barrel – ein Anstieg von rund 4,6 Prozent an einem einzigen Handelstag – nachdem Iran ein Kraftwerk mit Meerwasserentsalzungsanlage in Kuwait angriff und die Eskalation im Persischen Golf eskalierte. WTI stieg parallel auf 82,49 Dollar. Der Schiffsverkehr durch die Straße von Hormus – in Friedenszeiten Transitroute für rund 20 Prozent des weltweiten Ölhandels – ist auf ein Minimum eingebrochen: Innerhalb von 24 Stunden wurden laut MarineTraffic nur noch sechs Schiffsdurchfahrten registriert, verglichen mit 18 bis 22 täglich Anfang des Monats. Iran hat zudem die Huthis um Schließung der Roten-Meer-Route gebeten, sollten US-Angriffe auf iranische Strominfrastruktur folgen. Einordnung: Ein dauerhafter Ausfall von Hormus würde die globalen Energiepreise dramatisch treiben und Inflationserwartungen neu befeuern – das größte systemische Marktrisiko derzeit.",
+      "source": "CNBC, Al Jazeera, Bloomberg (17.–18. Juli 2026)"
+    },
+    {
+      "headline": "Halbleiter-Sektor im Ausverkauf: KI-Ausgaben-Zweifel und chinesische KI-Konkurrenz erschüttern Stimmung",
+      "body": "Semiconductor-Aktien wurden am Donnerstag und Freitag hart abverkauft: Marvell verlor über 8,7 Prozent, Intel fiel 5,6 Prozent, AMD gab 4,2 Prozent nach, und Micron büßte rund 3,5 Prozent ein. Auslöser war eine wachsende Sorge, dass die großen KI-Hyperscaler ihre Kapitalausgaben für KI-Infrastruktur zurückschrauben könnten – verstärkt durch neue chinesische KI-Modelle (u.a. von Kimi), die Bedenken über eine Überinvestition in westliche KI-Hardware schüren. Paradox: Microns fundamentale Lage bleibt stark – HBM-Kapazitäten für 2026 sind vollständig ausverkauft. Apple dagegen profitierte vom Risk-off als Sicherer Hafen und legte zu. Einordnung: Der Markt unterscheidet zunehmend zwischen Profiteuren der KI-Infrastruktur (Nvidia, Apple) und Zulieferern, die als überbewertet gelten – eine klassische Rotations- und Konsolidierungsbewegung nach der Rally.",
+      "source": "Trading Economics, Handelsblatt, phemex.com, Kapitalmarktexperten.de (16.–17. Juli 2026)"
+    },
+    {
+      "headline": "Netflix: Quartalsergebnisse knapp unter Erwartungen – schwacher Q3-Ausblick lässt Aktie einbrechen",
+      "body": "Netflix meldete für Q2 2026 einen Umsatz von 12,56 Milliarden Dollar – ein Anstieg von 13 Prozent gegenüber dem Vorjahr, aber knapp unter der Analystenkonsensschätzung von 12,59 Milliarden Dollar. Der Gewinn je Aktie lag mit 80 Cent leicht über den erwarteten 79 Cent. Das Unternehmen engte die Jahresprognose auf 51,0 bis 51,4 Milliarden Dollar ein, bestätigte aber grundsätzlich seinen bisherigen Ausblick. Der Kurseinbruch von rund 11 Prozent nach den Zahlen erklärt sich durch den schwächer als erwarteten Q3-Ausblick mit einem Umsatzwachstum von nur 12 Prozent. Einordnung: Netflix ist weiterhin profitabel – 33 Prozent operative Marge – aber Investoren wollen nach Jahren des Hyperwachstums mehr. Geringere Transparenz durch reduzierte Viewership-Berichte ab 2027 erhöht die Unsicherheit.",
+      "source": "CNBC, Netflix SEC-Filing, Variety (16.–17. Juli 2026)"
+    },
+    {
+      "headline": "Fed-Chef Warsh vor Kongress: Inflationsrisiken durch Ölpreisanstieg im Fokus",
+      "body": "Kevin Warsh, der neue Fed-Vorsitzende, trat in dieser Woche erstmals vor dem US-Kongress auf und stand dabei im Kreuzfeuer zwischen inflationären Risiken durch den Ölpreisanstieg infolge des Iran-Krieges und dem Druck, die Wirtschaft nicht abzuwürgen. Hypothekenzinsen stiegen zuletzt auf den höchsten Stand seit Beginn des Iran-Krieges, während Verbrauchervertrauen aufgrund gesunkener Benzinpreise zuletzt noch gestiegen war – eine Trendumkehr ist durch den erneuten Ölpreisschock nun wahrscheinlich. Der Großhandelspreisindex (PPI) zeigte zuletzt eine Verbesserung, die Energiekomponente dürfte sich jedoch in den kommenden Wochen wieder belastend auswirken. Einordnung: Die Fed steckt in einem klassischen Stagflationsszenario: Angebotsschocks durch Geopolitik verteuern die Energie, während die Binnenkonjunktur und der Arbeitsmarkt bisher stabil sind. Zinssenkungen rücken damit weiter in die Ferne.",
+      "source": "CNN Markets, CNBC (14.–17. Juli 2026)"
+    }
+  ]
 }
