@@ -40,7 +40,7 @@ QUALITÄTSANFORDERUNGEN:
 - Keine reine Linkliste – echte Zusammenfassungen mit Einordnung
 - Lieber 8-10 wichtige Meldungen gut erklärt als 20 oberflächliche
 
-Antworte NUR mit validem JSON in exakt diesem Format, keine Markdown-Codeblöcke, kein Text davor/danach:
+Antworte NUR mit validem JSON in exakt diesem Format. Deine Antwort MUSS mit dem Zeichen { beginnen und mit } enden – keine Einleitung, kein "Hier ist...", keine Markdown-Formatierung, keine Codeblock-Fences, kein Text davor oder danach:
 {
   "date": "YYYY-MM-DD",
   "summary": "3-4 Sätze Überblick",
@@ -82,11 +82,21 @@ def generate_briefing() -> dict:
             "Möglicherweise max_tokens erreicht, bevor der Bericht fertig war."
         )
 
+    # Robuste Extraktion: nimm alles zwischen der ersten "{" und der letzten "}",
+    # falls Claude trotz Anweisung noch einleitenden Text davor/danach gesetzt hat
+    first_brace = raw_text.find("{")
+    last_brace = raw_text.rfind("}")
+    if first_brace == -1 or last_brace == -1 or last_brace < first_brace:
+        print(f"WARNUNG: Kein JSON-Objekt gefunden im Text (erste 2000 Zeichen):\n{raw_text[:2000]}")
+        raise RuntimeError("Kein JSON-Objekt in der Antwort gefunden.")
+
+    json_str = raw_text[first_brace : last_brace + 1]
+
     try:
-        data = json.loads(raw_text)
+        data = json.loads(json_str)
     except json.JSONDecodeError as e:
         print(f"WARNUNG: JSON-Parsing fehlgeschlagen: {e}")
-        print(f"Erhaltener Text (erste 2000 Zeichen):\n{raw_text[:2000]}")
+        print(f"Extrahierter String (erste 2000 Zeichen):\n{json_str[:2000]}")
         raise
 
     return data
