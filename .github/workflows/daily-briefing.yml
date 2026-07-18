@@ -1,0 +1,45 @@
+name: Daily Briefing
+
+on:
+  schedule:
+    - cron: "0 7 * * *"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  generate-and-notify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Generate briefing
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: python scripts/generate_briefing.py
+
+      - name: Commit updated briefing
+        run: |
+          git config user.name "daily-briefing-bot"
+          git config user.email "actions@github.com"
+          git add docs/briefing.json
+          git diff --quiet && git diff --staged --quiet || git commit -m "Update briefing $(date -u +%Y-%m-%d)"
+          git push
+
+      - name: Send push notification
+        env:
+          WEB_PUSH_SUBSCRIPTION: ${{ secrets.WEB_PUSH_SUBSCRIPTION }}
+          VAPID_PRIVATE_KEY: ${{ secrets.VAPID_PRIVATE_KEY }}
+          VAPID_CLAIMS_EMAIL: ${{ secrets.VAPID_CLAIMS_EMAIL }}
+          BRIEFING_URL: ${{ vars.BRIEFING_URL }}
+        run: python scripts/send_push.py
