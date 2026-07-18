@@ -12,7 +12,7 @@ from anthropic import Anthropic
 
 # --- Konfiguration ---
 MODEL = "claude-sonnet-4-6"  # gutes Preis-/Qualitätsverhältnis für diesen Zweck
-MAX_TOKENS = 4000
+MAX_TOKENS = 8000  # genug Spielraum für Websuche + langen Bericht
 
 PROMPT = """Erstelle ein hochwertiges Daily Briefing mit den wichtigsten weltpolitischen und wirtschaftlichen Nachrichten der letzten 24 Stunden. Zielgruppe: informierter Leser, will schnell aber fundiert auf dem neuesten Stand sein. Lesezeit: 10-15 Minuten.
 
@@ -71,7 +71,24 @@ def generate_briefing() -> dict:
     # Fallback: falls doch mal Codeblock-Fences drin sind
     raw_text = raw_text.replace("```json", "").replace("```", "").strip()
 
-    data = json.loads(raw_text)
+    if not raw_text:
+        # Diagnose-Infos ins Log schreiben, damit man im Actions-Log sieht, was los war
+        print(f"WARNUNG: Leere Textantwort. stop_reason={response.stop_reason}")
+        print(f"Anzahl content blocks: {len(response.content)}")
+        for i, b in enumerate(response.content):
+            print(f"  Block {i}: type={b.type}")
+        raise RuntimeError(
+            f"Claude hat keinen Text zurückgegeben (stop_reason={response.stop_reason}). "
+            "Möglicherweise max_tokens erreicht, bevor der Bericht fertig war."
+        )
+
+    try:
+        data = json.loads(raw_text)
+    except json.JSONDecodeError as e:
+        print(f"WARNUNG: JSON-Parsing fehlgeschlagen: {e}")
+        print(f"Erhaltener Text (erste 2000 Zeichen):\n{raw_text[:2000]}")
+        raise
+
     return data
 
 
